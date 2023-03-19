@@ -8,6 +8,13 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.buttonLabel {
+    margin-top: 3px;
 }
 
 .shadow {
@@ -60,8 +67,8 @@
 }
 
 .outline.default {
-    border: 1px solid var(--text-disabled);
-    color: var(--text-disabled);
+    border: 1px solid var(--color-default);
+    color: var(--text-default);
     background-color: #fff;
 }
 
@@ -159,4 +166,13 @@
     color: var(--text-disabled);
     background-color: transparent;
     box-shadow: none;
+}
+
+.button:disabled.outline,
+.button[disabled].outline,
+.button:disabled.outline:hover,
+.button[disabled].outline:hover {
+    color: var(--text-disabled);
+    border: 1px solid var(--text-disabled);
+    background-color: transparent;
 }

@@ -25,13 +25,13 @@ export const Button = ({label = "Button", variant = 'filled', disableShadow = fa
             return(
                 <>
                     <CustomIcon name={startIcon}/>
-                    { label }
+                    <span className={styles.buttonLabel}>{ label }</span>
                 </>
             )
         } else if(endIcon) {
             return(
                 <>
-                    { label }
+                    <span className={styles.buttonLabel}>{ label }</span>
                     <CustomIcon name={endIcon}/>
                 </>
             )

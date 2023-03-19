@@ -1,4 +1,7 @@
-export type IconName = 'pencil' | 'home' | 'paid' | 'menu'
+import { Icon } from "@mui/material"
+import styles from './CustomIcon.module.css';
+
+export type IconName = 'home' | 'paid' | 'menu' | 'search' | 'favorite';
 
 interface Props {
     name: IconName
@@ -6,6 +9,6 @@ interface Props {
 
 export const CustomIcon = ({name}: Props) => {
     return (
-        <></>
+        <Icon className={styles.iconFont}>{name}</Icon>
     )
 }
