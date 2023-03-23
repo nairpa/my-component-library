@@ -1,3 +1,7 @@
+.container {
+    width: 100%;
+}
+
 .cardContainer {
     border: 1px solid var(--color-default);
     border-radius: var(--border-radius);
@@ -12,19 +16,36 @@
     box-sizing: border-box;
 }
 
+.cardCode {
+    border: 1px solid var(--color-default);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    background-color: rgb(25, 25, 25, 0.9);
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+    padding: 2em 1em;
+    box-sizing: border-box;
+}
+
 .cardButtons {
-    position: absolute;
-    right: 2em;
-    margin-top: -4.7em;
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
     box-sizing: border-box;
 }
 
 .cardButtons button {
     position: relative;
-    background-color: var(--text);
     border: none;
     padding: 0.3em;
-    color: white;
+    background-color: transparent;
+    font-weight: 500;
+    color: var(--color-primary);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 }

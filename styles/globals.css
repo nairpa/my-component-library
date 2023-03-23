@@ -48,11 +48,10 @@
   gap: 1em;
   box-sizing: border-box;
   flex-direction: column;
+  max-width: 70%;
   width: 100%;
   align-items: flex-start;
   justify-content: flex-start;
-  height: calc(100vh - 2em);
-  overflow: auto;
 }
 
 .border {
@@ -67,7 +66,11 @@
 
 main {
   width: calc(100% - 2em);
+  height: calc(100vh - 2em);
   padding: 1em;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .col {
