@@ -1,4 +1,3 @@
-import { Label } from "@mui/icons-material";
 import { ButtonHTMLAttributes, DetailedHTMLProps, useRef } from "react";
 import { CustomIcon, IconName } from "../icon/CustomIcon";
 import styles from './Button.module.css';

@@ -1,0 +1,10 @@
+.iconButton {
+    background-color: transparent;
+    border-radius: none;
+    border: none;
+    color: white;
+}
+
+.iconButton:focus {
+    outline: none;
+}

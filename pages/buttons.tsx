@@ -1,5 +1,5 @@
-import { Button } from "@/common/components/button/Button";
 import { Card } from "@/common/components/card/Card";
+import { Button } from "@nairpa/stone-ui";
 
 export default function ButtonPage() {
     return (
@@ -32,13 +32,6 @@ export default function ButtonPage() {
             <Button color='primary' variant="text" label="Small" size="sm" />
             <Button color='primary' variant="outline" label="Medium" size="md" />
             <Button color='primary' variant="filled" label="Large" size="lg" />
-          </Card>
-          <h3>Icons</h3>
-          <Card>
-            <Button color='primary' variant="filled" label="Icon button" endIcon="home" />
-            <Button color='primary' variant="filled" label="Icon button" startIcon="home" />
-            <Button color='primary' variant="text" label="Icon button" endIcon="home" />
-            <Button color='primary' variant="text" label="Icon button" startIcon="home" />
           </Card>
           <h3>Disable shadow</h3>
           <Card>

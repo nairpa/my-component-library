@@ -1,9 +1,10 @@
+import { HomePage } from '@/modules/home/Home';
 import { NextPageLayout } from './_app';
 
 export const Home: NextPageLayout = () => {
   return (
     <>
-      <div>Example</div>
+      <HomePage />
     </>
   );
 }
