@@ -1,17 +1,33 @@
 import { CustomIcon } from "@/common/components/icon/CustomIcon"
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styles from './Home.module.css';
 import { useCopyToClipboard } from "@/common/hooks/useCopyToClipboard";
 
 export const HomePage = () => {
     const ref = useRef<HTMLSpanElement>(null);
-
+    const [ isCopied, setIsCopied ] = useState<boolean | null>(null);
     const [ handleCopy ] = useCopyToClipboard()
 
     const handleClick = async (event: HTMLSpanElement | null) => {
         if(event?.textContent) {
-            await handleCopy(event.textContent)
+            const copied = await handleCopy(event.textContent)
+            setIsCopied(copied)
+            setTimeout(() => {
+              setIsCopied(null)
+            }, 5000)
         }
+    }
+
+    const showCopyState = () => {
+      if(isCopied) {
+        return (
+          <span className={styles.copyState}>Copied</span>
+        )
+      } else if(isCopied === false) {
+        <span className={styles.copyState}>Failed</span>
+      } else if(isCopied === null) {
+        return;
+      }
     }
 
     return (
@@ -25,6 +41,7 @@ export const HomePage = () => {
                 <span ref={ref}>npm install @nairpa/stone-ui</span>
                 <button className={styles.iconButton} onClick={() => handleClick(ref.current)}>
                     <CustomIcon customClass="icon-position" name="content_copy" />
+                    { showCopyState() }
                 </button>
             </code>
 
